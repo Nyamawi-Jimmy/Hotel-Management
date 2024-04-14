@@ -75,7 +75,7 @@
                                                         </a>
                                                         <a class="dropdown-item bookingDelete" href="#" data-toggle="modal" data-target="#delete_asset">
                                                             <i class="fas fa-trash-alt m-r-5"></i> Delete
-                                                        </a> 
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </td>

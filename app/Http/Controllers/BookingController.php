@@ -23,7 +23,7 @@ class BookingController extends Controller
         $user = DB::table('users')->get();
         return view('formbooking.bookingadd',compact('data','user'));
     }
-    
+
     // booking edit
     public function bookingEdit($bkg_id)
     {
@@ -41,11 +41,10 @@ class BookingController extends Controller
             'date' => 'required|string|max:255',
             'time' => 'required|string|max:255',
             'arrival_date'  => 'required|string|max:255',
-            'depature_date' => 'required|string|max:255',
+            'depature_date' => 'string|max:255',
             'email'      => 'required|string|max:255',
             'phone_number'  => 'required|string|max:255',
-            'fileupload' => 'required|file',
-            'message'    => 'required|string|max:255',
+            'fileupload' => 'file',
         ]);
 
         DB::beginTransaction();
@@ -54,7 +53,7 @@ class BookingController extends Controller
             $photo= $request->fileupload;
             $file_name = rand() . '.' .$photo->getClientOriginalName();
             $photo->move(public_path('/assets/upload/'), $file_name);
-           
+
             $booking = new Booking;
             $booking->name = $request->name;
             $booking->room_type     = $request->room_type;
@@ -66,13 +65,12 @@ class BookingController extends Controller
             $booking->email       = $request->email;
             $booking->ph_number   = $request->phone_number;
             $booking->fileupload  = $file_name;
-            $booking->message     = $request->message;
             $booking->save();
-            
+
             DB::commit();
             Toastr::success('Create new booking successfully :)','Success');
             return redirect()->route('form/allbooking');
-            
+
         } catch(\Exception $e) {
             DB::rollback();
             Toastr::error('Add Booking fail :)','Error');
@@ -106,11 +104,10 @@ class BookingController extends Controller
                 'email'   => $request->email,
                 'ph_number' => $request->phone_number,
                 'fileupload'=> $file_name,
-                'message'   => $request->message,
             ];
 
             Booking::where('bkg_id',$request->bkg_id)->update($update);
-        
+
             DB::commit();
             Toastr::success('Updated booking successfully :)','Success');
             return redirect()->back();
@@ -130,7 +127,7 @@ class BookingController extends Controller
             unlink('assets/upload/'.$request->fileupload);
             Toastr::success('Booking deleted successfully :)','Success');
             return redirect()->back();
-        
+
         } catch(\Exception $e) {
 
             DB::rollback();

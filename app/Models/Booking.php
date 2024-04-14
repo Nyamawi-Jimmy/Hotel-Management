@@ -19,6 +19,5 @@ class Booking extends Model
         'email',
         'ph_number',
         'fileupload',
-        'message',
     ];
 }

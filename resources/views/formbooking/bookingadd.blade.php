@@ -22,6 +22,15 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Name</label>
+                                    <input type="text" class="form-control @error('name') is-invalid @enderror" id="usr1" name="name" value="{{ old('name') }}">
+
+                                </div>
+                            </div>
+
+{{--
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Name</label>
                                     <select class="form-control @error('name') is-invalid @enderror" id="sel1" name="name" value="{{ old('name') }}">
                                         <option selected disabled> --Select Name-- </option>
                                         @foreach ($user as $users )
@@ -30,6 +39,7 @@
                                     </select>
                                 </div>
                             </div>
+--}}
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Room Type</label>
@@ -67,7 +77,7 @@
                                 <div class="form-group">
                                     <label>Arrival Date</label>
                                     <div class="cal-icon">
-                                        <input type="text" class="form-control datetimepicker @error('arrival_date') is-invalid @enderror" name="arrival_date" value="{{ old('arrival_date') }}">
+                                        <input type="text" class="form-control datetimepicker @error('arrival_date') is-invalid @enderror" name="arrival_date" value="{{ old('arrival_date') ?? "N/A" }}">
                                     </div>
                                 </div>
                             </div>
@@ -75,7 +85,7 @@
                                 <div class="form-group">
                                     <label>Depature Date</label>
                                     <div class="cal-icon">
-                                        <input type="text" class="form-control datetimepicker @error('depature_date') is-invalid @enderror" name="depature_date" value="{{ old('depature_date') }}"> 
+                                        <input type="text" class="form-control datetimepicker value="{{ old('depature_date') }}">
                                     </div>
                                 </div>
                             </div>
@@ -100,12 +110,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Message</label>
-                                    <textarea class="form-control @error('message') is-invalid @enderror" rows="1.5" id="message" name="message" value="{{ old('message') }}"></textarea>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -122,5 +126,5 @@
         });
         </script>
     @endsection
-    
+
 @endsection

@@ -43,8 +43,7 @@ class RoomsController extends Controller
             'charges_for_cancellation' => 'required|string|max:255',
             'rent'          => 'required|string|max:255',
             'phone_number'  => 'required|string|max:255',
-            'fileupload'    => 'required|file',
-            'message'       => 'required|string|max:255',
+            'fileupload'    => 'file',
         ]);
 
         DB::beginTransaction();
@@ -53,7 +52,7 @@ class RoomsController extends Controller
             $photo= $request->fileupload;
             $file_name = rand() . '.' .$photo->getClientOriginalName();
             $photo->move(public_path('/assets/upload/'), $file_name);
-           
+
             $room = new Room;
             $room->name         = $request->name;
             $room->room_type    = $request->room_type;
@@ -66,11 +65,11 @@ class RoomsController extends Controller
             $room->fileupload   = $file_name;
             $room->message      = $request->message;
             $room->save();
-            
+
             DB::commit();
             Toastr::success('Create new room successfully :)','Success');
             return redirect()->route('form/allrooms/page');
-            
+
         } catch(\Exception $e) {
             DB::rollback();
             Toastr::error('Add Room fail :)','Error');
@@ -105,7 +104,7 @@ class RoomsController extends Controller
                 'message'   => $request->message,
             ];
             Room::where('bkg_room_id',$request->bkg_room_id)->update($update);
-        
+
             DB::commit();
             Toastr::success('Updated room successfully :)','Success');
             return redirect()->back();
@@ -125,7 +124,7 @@ class RoomsController extends Controller
             unlink('assets/upload/'.$request->fileupload);
             Toastr::success('Room deleted successfully :)','Success');
             return redirect()->back();
-        
+
         } catch(\Exception $e) {
 
             DB::rollback();

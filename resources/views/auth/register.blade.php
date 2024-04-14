@@ -4,7 +4,11 @@
         <div class="login-wrapper">
             <div class="container">
                 <div class="loginbox">
-                    <div class="login-left"> <img class="img-fluid" src="assets/img/logo.png" alt="Logo"> </div>
+                    <div class="login-left">
+{{--
+                        <img class="img-fluid" src="assets/img/logo.png" alt="Logo">
+--}}
+                    </div>
                     <div class="login-right">
                         <div class="login-right-wrap">
                             <h1 class="mb-3">Register</h1>
@@ -27,19 +31,19 @@
                                 </div>
                             </form>
                             <div class="login-or">
-                                <span class="or-line"></span> 
-                                <span class="span-or">or</span> 
+                                <span class="or-line"></span>
+                                <span class="span-or">or</span>
                             </div>
-                            <div class="social-login"> 
-                                <span>Register with</span> 
+                            <div class="social-login">
+                                <span>Register with</span>
                                 <a href="#" class="facebook">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
                                 <a href="#" class="google">
-                                    <i class="fab fa-google"></i></a> 
+                                    <i class="fab fa-google"></i></a>
                                 </div>
-                            <div class="text-center dont-have">Already have an account? 
-                                <a href="{{ route('login') }}">Login</a> 
+                            <div class="text-center dont-have">Already have an account?
+                                <a href="{{ route('login') }}">Login</a>
                             </div>
                         </div>
                     </div>

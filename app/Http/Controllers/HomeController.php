@@ -27,8 +27,12 @@ class HomeController extends Controller
     // home page
     public function index()
     {
+
         $allBookings = DB::table('bookings')->get();
-        return view('dashboard.home',compact('allBookings'));
+        $allBookingsCount = DB::table('bookings')->get()->count();
+        $roomsCount = DB::table("rooms")->get()->count();
+        $customerCount = DB::table("customers")->get()->count();
+        return view('dashboard.home',compact('allBookings', 'allBookingsCount',"roomsCount","customerCount"));
     }
 
     // profile
@@ -36,4 +40,5 @@ class HomeController extends Controller
     {
         return view('profile');
     }
+
 }

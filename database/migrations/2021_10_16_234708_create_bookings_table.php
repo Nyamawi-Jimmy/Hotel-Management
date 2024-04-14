@@ -26,7 +26,6 @@ class CreateBookingsTable extends Migration
             $table->string('email')->nullable();
             $table->string('ph_number')->nullable();
             $table->string('fileupload')->nullable();
-            $table->string('message')->nullable();
             $table->timestamps();
         });
     }

@@ -13,8 +13,10 @@ class CustomerController extends Controller
     public function allCustomers()
     {
         $allCustomers = DB::table('customers')->get();
-        return view('formcustomers.allcustomers',compact('allCustomers'));
+        $allBookings = DB::table('bookings')->get();
+        return view('formcustomers.allcustomers',compact('allCustomers',"allBookings"));
     }
+
 
     // add Customer
     public function addCustomer()
@@ -46,7 +48,7 @@ class CustomerController extends Controller
             $photo= $request->fileupload;
             $file_name = rand() . '.' .$photo->getClientOriginalName();
             $photo->move(public_path('/assets/upload/'), $file_name);
-           
+
             $customer = new Customer;
             $customer->name = $request->name;
             $customer->room_type     = $request->room_type;
@@ -60,11 +62,11 @@ class CustomerController extends Controller
             $customer->fileupload  = $file_name;
             $customer->message     = $request->message;
             $customer->save();
-            
+
             DB::commit();
             Toastr::success('Create new customer successfully :)','Success');
             return redirect()->route('form/allcustomers/page');
-            
+
         } catch(\Exception $e) {
             DB::rollback();
             Toastr::error('Add Customer fail :)','Error');
@@ -108,7 +110,7 @@ class CustomerController extends Controller
                 'message'   => $request->message,
             ];
             Customer::where('bkg_customer_id',$request->bkg_customer_id)->update($update);
-        
+
             DB::commit();
             Toastr::success('Updated customer successfully :)','Success');
             return redirect()->back();
@@ -127,7 +129,7 @@ class CustomerController extends Controller
             unlink('assets/upload/'.$request->fileupload);
             Toastr::success('Customer deleted successfully :)','Success');
             return redirect()->back();
-        
+
         } catch(\Exception $e) {
 
             DB::rollback();
