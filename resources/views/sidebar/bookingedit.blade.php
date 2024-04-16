@@ -25,6 +25,7 @@
                         <li><a href="{{ route('form/addroom/page') }}"> Add Rooms </a></li>
                     </ul>
                 </li>
+{{--
                 <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Staff </span> <span class="menu-arrow"></span></a>
                     <ul class="submenu_class" style="display: none;">
                         <li><a href="all-staff.html">All Staff </a></li>
@@ -32,13 +33,14 @@
                         <li><a href="add-staff.html"> Add Staff </a></li>
                     </ul>
                 </li>
-               
-                <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Employees </span> <span class="menu-arrow"></span></a>
+--}}
+
+                <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Staff </span> <span class="menu-arrow"></span></a>
                     <ul class="submenu_class" style="display: none;">
-                        <li><a href="employees.html">Employees List </a></li>
-                        <li><a href="leaves.html">Leaves </a></li>
-                        <li><a href="holidays.html">Holidays </a></li>
-                        <li><a href="attendance.html">Attendance </a></li>
+                        <li><a href="{{route("form/allemployees/page")}}">Employees List </a></li>
+                        <li><a href="{{route("form/employees/leave")}}">Leaves </a></li>
+                        <li><a href="{{route("form/employees/holiday")}}">Holidays </a></li>
+                        <li><a href="{{route("form/employees/attendance")}}">Attendance </a></li>
                     </ul>
                 </li>
                 <li class="submenu"> <a href="#"><i class="far fa-money-bill-alt"></i> <span> Accounts </span> <span class="menu-arrow"></span></a>
@@ -58,8 +60,8 @@
                 </li>
                 <li class="submenu">
                     <a href="#">
-                        <i class="fa fa-user-plus"></i> 
-                        <span> User Management </span> 
+                        <i class="fa fa-user-plus"></i>
+                        <span> User Management </span>
                         <span class="menu-arrow"></span>
                     </a>
                     <ul class="submenu_class" style="display: none;">

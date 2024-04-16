@@ -99,53 +99,9 @@
                 <div class="col-md-12 col-lg-6">
                     <div class="card card-chart">
                         <div class="card-header">
-                            <h4 class="card-title">ROOMS BOOKED</h4> </div>
+                            <h4 class="card-title">HOUSES BOOKED</h4> </div>
                         <div class="card-body">
                             <div id="donut-chart"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 d-flex">
-                    <div class="card card-table flex-fill">
-                        <div class="card-header">
-                            <h4 class="card-title float-left mt-2">Booking</h4>
-                            <button type="button" class="btn btn-primary float-right veiwbutton">Veiw All</button>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-hover table-center">
-                                    <thead>
-                                        <tr>
-                                            <th>Booking ID</th>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Aadhar Number</th>
-                                            <th class="text-center">Room Type</th>
-                                            <th class="text-right">Number</th>
-                                            <th class="text-center">Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($allBookings as $bookings )
-                                        <tr>
-                                            <td class="text-nowrap">
-                                                <div>{{ $bookings->bkg_id }}</div>
-                                            </td>
-                                            <td class="text-nowrap">{{ $bookings->name }}</td>
-                                            <td><a href="#" class="__cf_email__">{{ $bookings->email }}</a></td>
-                                            <td>{{ $bookings->total_numbers }}</td>
-                                            <td class="text-center">{{ $bookings->room_type }}</td>
-                                            <td class="text-right">
-                                                <div>{{ $bookings->ph_number }}</div>
-                                            </td>
-                                            <td class="text-center"> <span class="badge badge-pill bg-success inv-badge">INACTIVE</span> </td>
-                                        </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
-                            </div>
                         </div>
                     </div>
                 </div>

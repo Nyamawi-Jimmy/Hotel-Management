@@ -80,3 +80,13 @@ Route::get('form/room/edit/{bkg_room_id}', [App\Http\Controllers\RoomsController
 Route::post('form/room/save', [App\Http\Controllers\RoomsController::class, 'saveRecordRoom'])->middleware('auth')->name('form/room/save');
 Route::post('form/room/delete', [App\Http\Controllers\RoomsController::class, 'deleteRecord'])->middleware('auth')->name('form/room/delete');
 Route::post('form/room/update', [App\Http\Controllers\RoomsController::class, 'updateRecord'])->middleware('auth')->name('form/room/update');
+
+
+
+// ----------------------------- Employees -----------------------------//
+Route::get('form/allemployees/page', [App\Http\Controllers\EmployeesController::class, 'allEmployees'])->middleware('auth')->name('form/allemployees/page');
+Route::get('form/employees/add', [App\Http\Controllers\EmployeesController::class, 'addEmployees'])->middleware('auth')->name('form/employees/add');
+Route::get('form/employees/leave', [App\Http\Controllers\EmployeesController::class, 'Employeesleave'])->middleware('auth')->name('form/employees/leave');
+Route::get('form/employees/holiday', [App\Http\Controllers\EmployeesController::class, 'Employeesholiday'])->middleware('auth')->name('form/employees/holiday');
+Route::get('form/employees/attendance', [App\Http\Controllers\EmployeesController::class, 'Employeesattendance'])->middleware('auth')->name('form/employees/attendance');
+
