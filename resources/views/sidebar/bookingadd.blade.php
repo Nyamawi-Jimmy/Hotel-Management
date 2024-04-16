@@ -43,7 +43,7 @@
                 </li>
                 <li class="submenu"> <a href="#"><i class="far fa-money-bill-alt"></i> <span> Accounts </span> <span class="menu-arrow"></span></a>
                     <ul class="submenu_class" style="display: none;">
-                        <li><a class="active" href="{{route("form/accounts/invoice")}}">Invoices </a></li>
+                        <li><a href="{{route("form/accounts/invoice")}}">Invoices </a></li>
                         <li><a href="{{route("form/accounts/payments")}}">Payments </a></li>
                         <li><a href="{{route("form/accounts/expenses")}}">Expenses </a></li>
                     </ul>
