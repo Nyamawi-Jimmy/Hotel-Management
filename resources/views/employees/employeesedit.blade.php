@@ -58,7 +58,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Employees </span> <span class="menu-arrow"></span></a>
+                        <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Staff </span> <span class="menu-arrow"></span></a>
                             <ul class="submenu_class" style="display: none;">
                                 <li><a class="active" href="{{route("form/allemployees/page")}}">Employees List </a></li>
                                 <li><a href="">Leaves </a></li>
@@ -86,45 +86,52 @@
                 <div class="page-header">
                     <div class="row align-items-center">
                         <div class="col">
-                            <h3 class="page-title mt-5">Add Staff</h3> </div>
+                            <h3 class="page-title mt-5">Edit Staff</h3> </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <form action="{{ route('form/employees/save') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('form/employees/update') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="row formtype">
                                 <div class="col-md-4">
                                     <div class="form-group">
+                                        <label>Staff ID</label>
+                                        <input class="form-control" type="text" name="emply_id" value="{{ $employeeEdit->emply_id }}" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
                                         <label>Name</label>
-                                        <input type="text" class="form-control @error('name') is-invalid @enderror" id="usr1" name="name" value="{{ old('name') }}">
+                                        <input type="text" class="form-control @error('name') is-invalid @enderror" id="usr1" name="name" value="{{ $employeeEdit->name }}">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Email</label>
-                                        <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}">
+                                        <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ $employeeEdit->email }}">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Phone</label>
-                                        <input type="text" class="form-control @error('phone_number') is-invalid @enderror" id="usr1" name="phone_number" value="{{ old('phone_number') }}">
+                                        <input type="text" class="form-control @error('phone_number') is-invalid @enderror" id="usr1" name="phone_number" value="{{ $employeeEdit->phone_number }}">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Joining Date</label>
                                         <div class="cal-icon">
-                                            <input type="text" class="form-control datetimepicker" name="joining_date" value="{{ old('joining_date') }}">
+                                            <input type="text" class="form-control datetimepicker" name="joining_date" value="{{ $employeeEdit->joining_date }}">
                                         </div>
                                     </div>
                                 </div>
-                                    <div class="col-md-4">
+                                <div class="col-md-4">
                                     <div class="form-group">
                                         <label> Date</label>
                                         <div class="cal-icon">
-                                            <input type="text" class="form-control datetimepicker" name="date" value="{{ old('date') }}">
+                                            <input type="text" class="form-control datetimepicker" name="date" value="{{ $employeeEdit->date }}">
                                         </div>
                                     </div>
                                 </div>
@@ -132,7 +139,7 @@
                                     <div class="form-group">
                                         <label>Leaving Date</label>
                                         <div class="cal-icon">
-                                            <input type="text" class="form-control datetimepicker" name="leaving_date" value="{{ old('leaving_date') }}">
+                                            <input type="text" class="form-control datetimepicker" name="leaving_date" value="{{ $employeeEdit->leaving_date }}">
                                         </div>
                                     </div>
                                 </div>
@@ -150,7 +157,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary buttonedit">Create Employee</button>
+                            <button type="submit" class="btn btn-primary buttonedit">Edit Staff</button>
 
                         </form>
                     </div>

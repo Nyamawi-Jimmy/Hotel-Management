@@ -15,17 +15,14 @@ class CreateEmployeesTable extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
-            $table->string('bkg_room_id');
+            $table->string('emply_id');
             $table->string('name')->nullable();
-            $table->string('room_type')->nullable();
-            $table->string('ac_non_ac')->nullable();
-            $table->string('food')->nullable();
-            $table->string('bed_count')->nullable();
-            $table->string('charges_for_cancellation')->nullable();
-            $table->string('rent')->nullable();
+            $table->string('email')->nullable();
+            $table->string('role')->nullable();
+            $table->string('date')->nullable();
+            $table->string('joining_date')->nullable();
+            $table->string('leaving_date')->nullable();
             $table->string('phone_number')->nullable();
-            $table->string('fileupload')->nullable();
-            $table->string('message')->nullable();
             $table->timestamps();
         });
     }
