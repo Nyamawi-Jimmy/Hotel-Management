@@ -142,7 +142,7 @@ MacBook Pro</span></p>
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul>
                         <li>
-                            <a href="{{ route('home') }}"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a>
+                            <a href="{{route("home")}}"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a>
                         </li>
                         <li class="list-divider"></li>
                         <li class="submenu">
@@ -214,11 +214,10 @@ MacBook Pro</span></p>
                         <li class="submenu">
                             <a href="#"><i class="far fa-money-bill-alt"></i> <span> Accounts </span> <span class="menu-arrow"></span></a>
                             <ul class="submenu_class" style="display: none;">
-                                <li><a href="invoices.html">Invoices </a></li>
-                                <li><a href="payments.html">Payments </a></li>
-                                <li><a href="expenses.html">Expenses </a></li>
-                                <li><a href="taxes.html">Taxes </a></li>
-                                <li><a href="provident-fund.html">Provident Fund </a></li>
+                                <li><a class="active" href="{{route("form/accounts/invoice")}}">Invoices </a></li>
+                                <li><a href="{{route("form/accounts/payments")}}">Payments </a></li>
+                                <li><a href="{{route("form/accounts/expenses")}}">Expenses </a></li>
+
                             </ul>
                         </li>
                         <li class="submenu">
@@ -228,88 +227,19 @@ MacBook Pro</span></p>
                                 <li><a href="salary-veiw.html">Payslip </a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="calendar.html"><i class="fas fa-calendar-alt"></i> <span>Calendar</span></a>
-                        </li>
+
                         <li class="submenu">
-                            <a href="#"><i class="fe fe-table"></i> <span> Blog </span> <span class="menu-arrow"></span></a>
+                            <a href="#">
+                                <i class="fa fa-user-plus"></i>
+                                <span> User Management </span>
+                                <span class="menu-arrow"></span>
+                            </a>
                             <ul class="submenu_class" style="display: none;">
-                                <li><a href="blog.html">Blog </a></li>
-                                <li><a href="blog-details.html">Blog Veiw </a></li>
-                                <li><a href="add-blog.html">Add Blog </a></li>
-                                <li><a href="edit-blog.html">Edit Blog </a></li>
+                                <li><a href="salary.html">All User</a></li>
+                                <li><a href="salary-veiw.html">User Log Activity </a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="assets.html"><i class="fas fa-cube"></i> <span>Assests</span></a>
-                        </li>
-                        <li>
-                            <a href="activities.html"><i class="far fa-bell"></i> <span>Activities</span></a>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fe fe-table"></i> <span> Reports </span> <span class="menu-arrow"></span></a>
-                            <ul class="submenu_class" style="display: none;">
-                                <li><a href="expense-reports.html">Expense Report </a></li>
-                                <li><a href="invoice-reports.html">Invoice Report </a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="settings.html"><i class="fas fa-cog"></i> <span>Settings</span></a>
-                        </li>
-                        <li class="list-divider"></li>
-                        <li class="menu-title mt-3">
-                            <span>UI ELEMENTS</span>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fas fa-laptop"></i> <span> Components </span> <span class="menu-arrow"></span></a>
-                            <ul class="submenu_class" style="display: none;">
-                                <li><a href="uikit.html">UI Kit </a></li>
-                                <li><a href="typography.html">Typography </a></li>
-                                <li><a href="tabs.html">Tabs </a></li>
-                            </ul>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fas fa-edit"></i> <span> Forms </span> <span class="menu-arrow"></span></a>
-                            <ul class="submenu_class" style="display: none;">
-                                <li><a href="form-basic-inputs.html">Basic Input </a></li>
-                                <li><a href="form-input-groups.html">Input Groups </a></li>
-                                <li><a href="form-horizontal.html">Horizontal Form </a></li>
-                                <li><a href="form-vertical.html">Vertical Form </a></li>
-                            </ul>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fas fa-table"></i> <span> Tables </span> <span class="menu-arrow"></span></a>
-                            <ul class="submenu_class" style="display: none;">
-                                <li><a href="tables-basic.html">Basic Table </a></li>
-                                <li><a href="tables-datatables.html">Data Table </a></li>
-                            </ul>
-                        </li>
-                        <li class="list-divider"></li>
-                        <li class="menu-title mt-3">
-                            <span>EXTRAS</span>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fas fa-columns"></i> <span> Pages </span> <span class="menu-arrow"></span></a>
-                            <ul class="submenu_class" style="display: none;">
-                                <li><a href="login.html">Login </a></li>
-                                <li><a href="register.html">Register </a></li>
-                                <li><a href="forgot-password.html">Forgot Password </a></li>
-                                <li><a href="change-password.html">Change Password </a></li>
-                                <li><a href="lock-screen.html">Lockscreen </a></li>
-                                <li><a href="profile.html">Profile </a></li>
-                                <li><a href="gallery.html">Gallery </a></li>
-                                <li><a href="error-404.html">404 Error </a></li>
-                                <li><a href="error-500.html">500 Error </a></li>
-                                <li><a href="blank-page.html">Blank Page </a></li>
-                            </ul>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fas fa-share-alt"></i> <span> Multi Level </span> <span class="menu-arrow"></span></a>
-                            <ul class="submenu_class" style="display: none;">
-                                <li><a href="">Level 1 </a></li>
-                                <li><a href="">Level 2 </a></li>
-                            </ul>
-                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -322,8 +252,9 @@ MacBook Pro</span></p>
                     <div class="row align-items-center">
                         <div class="col">
                             <div class="mt-5">
-                                <h4 class="card-title float-left mt-2">Leave Request</h4>
-                                <a href="add-leave.html" class="btn btn-primary float-right veiwbutton">Add Leave</a>
+                                <h4 class="card-title float-left mt-2">Invoices</h4>
+                                <a href="create-invoice.html" class="btn btn-primary float-right veiwbutton">Create New
+                                    Invoice</a>
                             </div>
                         </div>
                     </div>
@@ -332,35 +263,7 @@ MacBook Pro</span></p>
                     <div class="col-lg-12">
                         <form>
                             <div class="row formtype">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>Empployee Name</label>
-                                        <input class="form-control" type="text" value="BKG-0001">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>Leave Type</label>
-                                        <select class="form-control" id="sel1" name="sellist1">
-                                            <option>Select</option>
-                                            <option>Casual Leave</option>
-                                            <option>Medical Leave</option>
-                                            <option>Loss Of Pay</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>Leave Status</label>
-                                        <select class="form-control" id="sel2" name="sellist1">
-                                            <option>Select</option>
-                                            <option>Pending</option>
-                                            <option>Approved</option>
-                                            <option>Rejected</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label>From</label>
                                         <div class="cal-icon">
@@ -368,7 +271,7 @@ MacBook Pro</span></p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label>To</label>
                                         <div class="cal-icon">
@@ -376,7 +279,18 @@ MacBook Pro</span></p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Leave Status</label>
+                                        <select class="form-control" id="sel1" name="sellist1">
+                                            <option>Select</option>
+                                            <option>Pending</option>
+                                            <option>Approved</option>
+                                            <option>Rejected</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label>Search</label>
                                         <a href="#" class="btn btn-success btn-block mt-0 search_button"> Search </a>
@@ -389,68 +303,128 @@ MacBook Pro</span></p>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="card">
-                            <div class="card-body">
+                        <div class="card card-table">
+
+                            <div class="card-body booking_card">
                                 <div class="table-responsive">
-                                    <table class="datatable table table-stripped">
+                                    <table class="datatable table table-stripped table table-hover table-center mb-0">
                                         <thead>
                                         <tr>
-                                            <th>Employee</th>
-                                            <th>Leave Type</th>
-                                            <th>From</th>
-                                            <th>To</th>
-                                            <th>No Of Days</th>
-                                            <th>Reason</th>
+                                            <th>#</th>
+                                            <th>Invoice Number</th>
+                                            <th>Name</th>
+                                            <th>Created Date</th>
+                                            <th>Due Date</th>
+                                            <th>In/Out Customer</th>
+                                            <th>Amount</th>
+                                            <th class="text-right">Status</th>
                                             <th class="text-right">Actions</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td>Haylie Feeney</td>
-                                            <td>Casual Leave</td>
-                                            <td>13 May 2018</td>
-                                            <td>13 July 2018</td>
-                                            <td>2 days</td>
-                                            <td>Not feeling well</td>
+                                            <td>
+                                                1
+                                            </td>
+                                            <td>#INV-0001</td>
+                                            <td>Soeng Souy</td>
+                                            <td>3-04-2020</td>
+                                            <td>6-04-2020</td>
+                                            <td>In Customer</td>
+                                            <td>$20</td>
+                                            <td class="text-right">
+                                                <div class="actions">
+                                                    <a href="#" class="btn btn-sm bg-success-light mr-2">
+                                                        Active
+                                                    </a>
+                                                </div>
+                                            </td>
                                             <td class="text-right">
                                                 <div class="dropdown dropdown-action">
                                                     <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v ellipse_color"></i></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
-                                                        <a class="dropdown-item" href="edit-leave.html"><i class="fas fa-pencil-alt m-r-5"></i> Edit</a>
+                                                        <a class="dropdown-item" href="edit-invoice.html"><i class="fas fa-pencil-alt m-r-5"></i> Edit</a>
                                                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_asset"><i class="fas fa-trash-alt m-r-5"></i> Delete</a>
                                                     </div>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Haylie Feeney</td>
-                                            <td>Casual Leave</td>
-                                            <td>13 May 2018</td>
-                                            <td>13 July 2018</td>
-                                            <td>2 days</td>
-                                            <td>Not feeling well</td>
+                                            <td>
+                                                1
+                                            </td>
+                                            <td>#INV-0002</td>
+                                            <td>Joseph Maglio</td>
+                                            <td>5-04-2020</td>
+                                            <td>9-04-2020</td>
+                                            <td>Out Customer</td>
+                                            <td>$20</td>
+                                            <td class="text-right">
+                                                <div class="actions">
+                                                    <a href="#" class="btn btn-sm bg-success-light mr-2">
+                                                        Active
+                                                    </a>
+                                                </div>
+                                            </td>
                                             <td class="text-right">
                                                 <div class="dropdown dropdown-action">
                                                     <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v ellipse_color"></i></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
-                                                        <a class="dropdown-item" href="edit-leave.html"><i class="fas fa-pencil-alt m-r-5"></i> Edit</a>
+                                                        <a class="dropdown-item" href="edit-invoice.html"><i class="fas fa-pencil-alt m-r-5"></i> Edit</a>
                                                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_asset"><i class="fas fa-trash-alt m-r-5"></i> Delete</a>
                                                     </div>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Haylie Feeney</td>
-                                            <td>Casual Leave</td>
-                                            <td>13 May 2018</td>
-                                            <td>13 July 2018</td>
-                                            <td>2 days</td>
-                                            <td>Not feeling well</td>
+                                            <td>
+                                                1
+                                            </td>
+                                            <td>#INV-0003</td>
+                                            <td>Eugenia Galloway </td>
+                                            <td>2-04-2020</td>
+                                            <td>10-04-2020</td>
+                                            <td>In Customer</td>
+                                            <td>$20</td>
+                                            <td class="text-right">
+                                                <div class="actions">
+                                                    <a href="#" class="btn btn-sm bg-success-light mr-2">
+                                                        Active
+                                                    </a>
+                                                </div>
+                                            </td>
                                             <td class="text-right">
                                                 <div class="dropdown dropdown-action">
                                                     <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v ellipse_color"></i></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
-                                                        <a class="dropdown-item" href="edit-leave.html"><i class="fas fa-pencil-alt m-r-5"></i> Edit</a>
+                                                        <a class="dropdown-item" href="edit-invoice.html"><i class="fas fa-pencil-alt m-r-5"></i> Edit</a>
+                                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_asset"><i class="fas fa-trash-alt m-r-5"></i> Delete</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                1
+                                            </td>
+                                            <td>#INV-0004</td>
+                                            <td>Barbara Kaiser</td>
+                                            <td>1-04-2020</td>
+                                            <td>8-04-2020</td>
+                                            <td>Out Customer</td>
+                                            <td>$20</td>
+                                            <td class="text-right">
+                                                <div class="actions">
+                                                    <a href="#" class="btn btn-sm bg-success-light mr-2">
+                                                        Active
+                                                    </a>
+                                                </div>
+                                            </td>
+                                            <td class="text-right">
+                                                <div class="dropdown dropdown-action">
+                                                    <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v ellipse_color"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a class="dropdown-item" href="edit-invoice.html"><i class="fas fa-pencil-alt m-r-5"></i> Edit</a>
                                                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_asset"><i class="fas fa-trash-alt m-r-5"></i> Delete</a>
                                                     </div>
                                                 </div>
@@ -459,19 +433,6 @@ MacBook Pro</span></p>
                                         </tbody>
                                     </table>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="delete_asset" class="modal fade delete-modal" role="dialog">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-body text-center">
-                            <img src="assets/img/sent.png" alt="" width="50" height="46">
-                            <h3 class="delete_class">Are you sure want to delete this Asset?</h3>
-                            <div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
-                                <button type="submit" class="btn btn-danger">Delete</button>
                             </div>
                         </div>
                     </div>

@@ -90,3 +90,14 @@ Route::get('form/employees/leave', [App\Http\Controllers\EmployeesController::cl
 Route::get('form/employees/holiday', [App\Http\Controllers\EmployeesController::class, 'Employeesholiday'])->middleware('auth')->name('form/employees/holiday');
 Route::get('form/employees/attendance', [App\Http\Controllers\EmployeesController::class, 'Employeesattendance'])->middleware('auth')->name('form/employees/attendance');
 
+// ----------------------------- Accounts -----------------------------//
+Route::get('form/accounts/invoice', [App\Http\Controllers\AccountsController::class, 'allInvoices'])->middleware('auth')->name('form/accounts/invoice');
+Route::get('form/accounts/payments', [App\Http\Controllers\AccountsController::class, 'allPayments'])->middleware('auth')->name('form/accounts/payments');
+Route::get('form/accounts/expenses', [App\Http\Controllers\AccountsController::class, 'allExpenses'])->middleware('auth')->name('form/accounts/expenses');
+
+// ----------------------------- Payroll -----------------------------//
+Route::get('form/payroll/salary', [App\Http\Controllers\PayrollController::class, 'allSalary'])->middleware('auth')->name('form/payroll/salary');
+Route::get('form/payroll/payslip', [App\Http\Controllers\PayrollController::class, 'allPayslips'])->middleware('auth')->name('form/payroll/payslip');
+
+
+
