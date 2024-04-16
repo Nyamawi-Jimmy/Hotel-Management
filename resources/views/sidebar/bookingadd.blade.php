@@ -51,18 +51,7 @@
                 <li class="submenu"> <a href="#"><i class="fas fa-book"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
                     <ul class="submenu_class" style="display: none;">
                         <li><a  href="{{route("form/payroll/salary")}}">Employee Salary </a></li>
-                        <li><a class="active" href="{{route("form/payroll/payslip")}}">Payslip </a></li>
-                    </ul>
-                </li>
-                <li class="submenu">
-                    <a href="#">
-                        <i class="fa fa-user-plus"></i>
-                        <span> User Management </span>
-                        <span class="menu-arrow"></span>
-                    </a>
-                    <ul class="submenu_class" style="display: none;">
-                        <li><a href="salary.html">All User</a></li>
-                        <li><a href="salary-veiw.html">User Log Activity </a></li>
+                        <li><a href="{{route("form/payroll/payslip")}}">Payslip </a></li>
                     </ul>
                 </li>
             </ul>
