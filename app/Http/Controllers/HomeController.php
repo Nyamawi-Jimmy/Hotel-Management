@@ -8,6 +8,9 @@ use DB;
 
 class HomeController extends Controller
 {
+    public  function show(){
+        return view("screens.home");
+    }
     /**
      * Create a new controller instance.
      *

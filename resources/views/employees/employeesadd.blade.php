@@ -51,7 +51,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Staff </span> <span class="menu-arrow"></span></a>
+                        <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Employees </span> <span class="menu-arrow"></span></a>
                             <ul class="submenu_class" style="display: none;">
                                 <li><a class="active" href="{{route("form/allemployees/page")}}">Employees List </a></li>
                                 <li><a href="{{route("form/employees/leave")}}">Leaves </a></li>
