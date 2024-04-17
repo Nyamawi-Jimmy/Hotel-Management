@@ -71,10 +71,9 @@
                         <li class="submenu">
                             <a href="#"><i class="fas fa-user"></i> <span> Staff </span> <span class="menu-arrow"></span></a>
                             <ul class="submenu_class" style="display: none;">
-                                <li><a class="active" href="{{route("form/allemployees/page")}}">Employees List </a></li>
+                                <li><a class="active" href="{{route("form/allemployees/page")}}">Staff List </a></li>
                                 <li><a href="{{route("form/employees/leave")}}">Leaves </a></li>
-                                <li><a href="holidays.html">Holidays </a></li>
-                                <li><a href="attendance.html">Attendance </a></li>
+
                             </ul>
                         </li>
                         <li class="submenu">
@@ -82,16 +81,7 @@
                             <ul class="submenu_class" style="display: none;">
                                 <li><a href="invoices.html">Invoices </a></li>
                                 <li><a href="payments.html">Payments </a></li>
-                                <li><a href="expenses.html">Expenses </a></li>
-                                <li><a href="taxes.html">Taxes </a></li>
-                                <li><a href="provident-fund.html">Provident Fund </a></li>
-                            </ul>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fas fa-book"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
-                            <ul class="submenu_class" style="display: none;">
-                                <li><a href="salary.html">Employee Salary </a></li>
-                                <li><a href="salary-veiw.html">Payslip </a></li>
+
                             </ul>
                         </li>
                     </ul>
@@ -107,47 +97,12 @@
                         <div class="col">
                             <div class="mt-5">
                                 <h4 class="card-title float-left mt-2">Staff</h4>
-                                <a href="{{route("form/employees/add")}}" class="btn btn-primary float-right veiwbutton">Add Employee</a>
+                                <a href="{{route("form/employees/add")}}" class="btn btn-primary float-right veiwbutton">Add Staff </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
-                        <form>
-                            <div class="row formtype">
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label>Employee ID</label>
-                                        <input type="text" class="form-control" id="usr">
-                                    </div>
-                                </div> <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label>Employee Name</label>
-                                        <input type="text" class="form-control" id="usr1">
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label>Role</label>
-                                        <select class="form-control" id="sel1" name="sellist1">
-                                            <option>Admin</option>
-                                            <option>Manager</option>
-                                            <option>Staff</option>
-                                            <option>Accountant</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label>Search</label>
-                                        <a href="#" class="btn btn-success btn-block mt-0 search_button"> Search </a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">

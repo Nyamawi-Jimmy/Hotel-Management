@@ -79,8 +79,7 @@
                             <ul class="submenu_class" style="display: none;">
                                 <li><a href={{route("form/allemployees/page")}}>Staff List </a></li>
                                 <li><a class="active" href="{{route("form/employees/leave")}}">Leaves </a></li>
-                                <li><a href="{{route("form/employees/holiday")}}">Holidays </a></li>
-                                <li><a href="{{route("form/employees/attendance")}}">Attendance </a></li>
+
                             </ul>
                         </li>
                         <li class="submenu">
@@ -93,95 +92,7 @@
                                 <li><a href="provident-fund.html">Provident Fund </a></li>
                             </ul>
                         </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fas fa-book"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
-                            <ul class="submenu_class" style="display: none;">
-                                <li><a href="salary.html">Employee Salary </a></li>
-                                <li><a href="salary-veiw.html">Payslip </a></li>
                             </ul>
-                        </li>
-                        <li>
-                            <a href="calendar.html"><i class="fas fa-calendar-alt"></i> <span>Calendar</span></a>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fe fe-table"></i> <span> Blog </span> <span class="menu-arrow"></span></a>
-                            <ul class="submenu_class" style="display: none;">
-                                <li><a href="blog.html">Blog </a></li>
-                                <li><a href="blog-details.html">Blog Veiw </a></li>
-                                <li><a href="add-blog.html">Add Blog </a></li>
-                                <li><a href="edit-blog.html">Edit Blog </a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="assets.html"><i class="fas fa-cube"></i> <span>Assests</span></a>
-                        </li>
-                        <li>
-                            <a href="activities.html"><i class="far fa-bell"></i> <span>Activities</span></a>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fe fe-table"></i> <span> Reports </span> <span class="menu-arrow"></span></a>
-                            <ul class="submenu_class" style="display: none;">
-                                <li><a href="expense-reports.html">Expense Report </a></li>
-                                <li><a href="invoice-reports.html">Invoice Report </a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="settings.html"><i class="fas fa-cog"></i> <span>Settings</span></a>
-                        </li>
-                        <li class="list-divider"></li>
-                        <li class="menu-title mt-3">
-                            <span>UI ELEMENTS</span>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fas fa-laptop"></i> <span> Components </span> <span class="menu-arrow"></span></a>
-                            <ul class="submenu_class" style="display: none;">
-                                <li><a href="uikit.html">UI Kit </a></li>
-                                <li><a href="typography.html">Typography </a></li>
-                                <li><a href="tabs.html">Tabs </a></li>
-                            </ul>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fas fa-edit"></i> <span> Forms </span> <span class="menu-arrow"></span></a>
-                            <ul class="submenu_class" style="display: none;">
-                                <li><a href="form-basic-inputs.html">Basic Input </a></li>
-                                <li><a href="form-input-groups.html">Input Groups </a></li>
-                                <li><a href="form-horizontal.html">Horizontal Form </a></li>
-                                <li><a href="form-vertical.html">Vertical Form </a></li>
-                            </ul>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fas fa-table"></i> <span> Tables </span> <span class="menu-arrow"></span></a>
-                            <ul class="submenu_class" style="display: none;">
-                                <li><a href="tables-basic.html">Basic Table </a></li>
-                                <li><a href="tables-datatables.html">Data Table </a></li>
-                            </ul>
-                        </li>
-                        <li class="list-divider"></li>
-                        <li class="menu-title mt-3">
-                            <span>EXTRAS</span>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fas fa-columns"></i> <span> Pages </span> <span class="menu-arrow"></span></a>
-                            <ul class="submenu_class" style="display: none;">
-                                <li><a href="login.html">Login </a></li>
-                                <li><a href="register.html">Register </a></li>
-                                <li><a href="forgot-password.html">Forgot Password </a></li>
-                                <li><a href="change-password.html">Change Password </a></li>
-                                <li><a href="lock-screen.html">Lockscreen </a></li>
-                                <li><a href="profile.html">Profile </a></li>
-                                <li><a href="gallery.html">Gallery </a></li>
-                                <li><a href="error-404.html">404 Error </a></li>
-                                <li><a href="error-500.html">500 Error </a></li>
-                                <li><a href="blank-page.html">Blank Page </a></li>
-                            </ul>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fas fa-share-alt"></i> <span> Multi Level </span> <span class="menu-arrow"></span></a>
-                            <ul class="submenu_class" style="display: none;">
-                                <li><a href="">Level 1 </a></li>
-                                <li><a href="">Level 2 </a></li>
-                            </ul>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -195,11 +106,11 @@
                         <div class="col">
                             <div class="mt-5">
                                 <h4 class="card-title float-left mt-2">Leave Request</h4>
-                                <a href="add-leave.html" class="btn btn-primary float-right veiwbutton">Add Leave</a>
+                                <a href="{{route("form/employees/addleave")}}" class="btn btn-primary float-right veiwbutton">Add Leave</a>
                             </div>
                         </div>
                     </div>
-                </div>F
+                </div>
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="card">
@@ -208,67 +119,47 @@
                                     <table class="datatable table table-stripped">
                                         <thead>
                                         <tr>
-                                            <th>Employee</th>
+                                            <th>Employee ID</th>
                                             <th>Leave Type</th>
                                             <th>From</th>
                                             <th>To</th>
-                                            <th>No Of Days</th>
                                             <th>Reason</th>
                                             <th class="text-right">Actions</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>Haylie Feeney</td>
-                                            <td>Casual Leave</td>
-                                            <td>13 May 2018</td>
-                                            <td>13 July 2018</td>
-                                            <td>2 days</td>
-                                            <td>Not feeling well</td>
-                                            <td class="text-right">
-                                                <div class="dropdown dropdown-action">
-                                                    <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v ellipse_color"></i></a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a class="dropdown-item" href="edit-leave.html"><i class="fas fa-pencil-alt m-r-5"></i> Edit</a>
-                                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_asset"><i class="fas fa-trash-alt m-r-5"></i> Delete</a>
+                                        @foreach ($Employeesleave as $employeesleave )
+                                            <tr>
+                                                <td hidden class="id">{{ $employeesleave->id }}</td>
+
+                                                <td>{{ $employeesleave->lve_id }}</td>
+                                                <td>{{ $employeesleave->name }}</td>
+                                                <td>{{ $employeesleave->leave_type }}</td>
+                                                <td>{{ $employeesleave->leave_from }}</td>
+
+                                                <td>{{ $employeesleave->leave_to }}</td>
+
+                                                <td>{{ $employeesleave->reason }}</td>
+                                                <td>
+                                                    <div class="actions"> <a href="#" class="btn btn-sm bg-success-light mr-2">Active</a> </div>
+                                                </td>
+                                                <td class="text-right">
+                                                    <div class="dropdown dropdown-action">
+                                                        <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                            <i class="fas fa-ellipsis-v ellipse_color"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a class="dropdown-item" href="{{ url('form/employees/edit/'.$employees->emply_id) }}">
+                                                                <i class="fas fa-pencil-alt m-r-5"></i> Edit
+                                                            </a>
+                                                            <a class="dropdown-item bookingDelete" href="#" data-toggle="modal" data-target="#delete_asset">
+                                                                <i class="fas fa-trash-alt m-r-5"></i> Delete
+                                                            </a>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Haylie Feeney</td>
-                                            <td>Casual Leave</td>
-                                            <td>13 May 2018</td>
-                                            <td>13 July 2018</td>
-                                            <td>2 days</td>
-                                            <td>Not feeling well</td>
-                                            <td class="text-right">
-                                                <div class="dropdown dropdown-action">
-                                                    <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v ellipse_color"></i></a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a class="dropdown-item" href="edit-leave.html"><i class="fas fa-pencil-alt m-r-5"></i> Edit</a>
-                                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_asset"><i class="fas fa-trash-alt m-r-5"></i> Delete</a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Haylie Feeney</td>
-                                            <td>Casual Leave</td>
-                                            <td>13 May 2018</td>
-                                            <td>13 July 2018</td>
-                                            <td>2 days</td>
-                                            <td>Not feeling well</td>
-                                            <td class="text-right">
-                                                <div class="dropdown dropdown-action">
-                                                    <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v ellipse_color"></i></a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a class="dropdown-item" href="edit-leave.html"><i class="fas fa-pencil-alt m-r-5"></i> Edit</a>
-                                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_asset"><i class="fas fa-trash-alt m-r-5"></i> Delete</a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                         </tbody>
                                     </table>
                                 </div>

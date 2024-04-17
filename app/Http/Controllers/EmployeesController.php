@@ -11,17 +11,22 @@ use Illuminate\Http\Request;
 
 class EmployeesController extends Controller
 {
+
+    //Leave Requests
+    public function Employeesleave()
+    {
+        $Employeesleave = DB::table('leaves')->get();
+        return view('employees.leaves',compact('Employeesleave',));
+    }
+
+
+    //Staff Lists
     public function allEmployees()
     {
         $allEmployees = DB::table('employees')->get();
         return view('employees.employees',compact('allEmployees'));
     }
 
-    public function Employeesleave()
-    {
-        $Employeesleave = DB::table('employees')->get();
-        return view('employees.leaves',compact('Employeesleave',));
-    }
 
     public function Employeesholiday()
     {

@@ -37,21 +37,13 @@
                     <ul class="submenu_class" style="display: none;">
                         <li><a href="employees.html">Employees List </a></li>
                         <li><a href="leaves.html">Leaves </a></li>
-                        <li><a href="holidays.html">Holidays </a></li>
-                        <li><a href="attendance.html">Attendance </a></li>
+
                     </ul>
                 </li>
                 <li class="submenu"> <a href="#"><i class="far fa-money-bill-alt"></i> <span> Accounts </span> <span class="menu-arrow"></span></a>
                     <ul class="submenu_class" style="display: none;">
                         <li><a href="{{route("form/accounts/invoice")}}">Invoices </a></li>
                         <li><a href="{{route("form/accounts/payments")}}">Payments </a></li>
-                        <li><a href="{{route("form/accounts/expenses")}}">Expenses </a></li>
-                    </ul>
-                </li>
-                <li class="submenu"> <a href="#"><i class="fas fa-book"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
-                    <ul class="submenu_class" style="display: none;">
-                        <li><a  href="{{route("form/payroll/salary")}}">Employee Salary </a></li>
-                        <li><a href="{{route("form/payroll/payslip")}}">Payslip </a></li>
                     </ul>
                 </li>
             </ul>

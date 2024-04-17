@@ -93,6 +93,10 @@ Route::get('form/employees/edit/{emply_id}', [App\Http\Controllers\EmployeesCont
 Route::post('form/employees/update', [App\Http\Controllers\EmployeesController::class, 'updateRecord'])->middleware('auth')->name('form/employees/update');
 Route::post('form/employees/delete', [App\Http\Controllers\EmployeesController::class, 'deleteRecord'])->middleware('auth')->name('form/employees/delete');
 
+// ----------------------------- Leave -----------------------------//
+Route::get('form/employees/addleave', [App\Http\Controllers\LeavesController::class, 'addLeavess'])->middleware('auth')->name('form/employees/addleave');
+Route::post('form/leave/save', [App\Http\Controllers\LeavesController::class, 'saveRecord'])->middleware('auth')->name('form/leave/save');
+
 
 // ----------------------------- Accounts -----------------------------//
 Route::get('form/accounts/invoice', [App\Http\Controllers\AccountsController::class, 'allInvoices'])->middleware('auth')->name('form/accounts/invoice');
