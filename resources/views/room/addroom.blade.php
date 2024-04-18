@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('menu')
-@extends('sidebar.addroom')
+@extends('sidebar1.addroom')
 @endsection
 @section('content')
     {{-- message --}}

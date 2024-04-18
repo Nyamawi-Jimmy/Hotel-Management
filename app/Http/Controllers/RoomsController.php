@@ -15,6 +15,12 @@ class RoomsController extends Controller
         $allRooms = DB::table('rooms')->get();
         return view('room.allroom',compact('allRooms'));
     }
+    public function allrooms1()
+    {
+        $allRooms = DB::table('rooms')->get();
+        return view('room.allroom',compact('allRooms'));
+    }
+
     // add room page
     public function addRoom()
     {
@@ -22,6 +28,13 @@ class RoomsController extends Controller
         $user = DB::table('users')->get();
         return view('room.addroom',compact('user','data'));
     }
+    public function addRoom1()
+    {
+        $data = DB::table('room_types')->get();
+        $user = DB::table('users')->get();
+        return view('room.addroom',compact('user','data'));
+    }
+
     // edit room
     public function editRoom($bkg_room_id)
     {

@@ -6,8 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PropertiesController;
 use App\Http\Controllers\RoomsController;
-use App\Http\Controllers\SessionsController;
-use App\Http\Controllers\UsersController;
+
 
 use App\Http\Controllers\HomeControllerUI;
 use App\Http\Controllers\ProfileController;
@@ -15,8 +14,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\ResetPasswordController;
-use App\Http\Controllers\ForgotPasswordController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,10 +36,6 @@ Route::group(['middleware'=>'auth'],function()
     {
         return view('home');
     });
-    Route::get('home',function()
-    {
-        return view('home');
-    });
 });
 
 
@@ -53,8 +47,7 @@ Auth::routes();
 
 Route::get("/home",[HomeControllerUI::class,"show"])->middleware('auth')->name('home');
 Route::get("about",[\App\Http\Controllers\AboutController::class,"show"])->name('about');
-Route::get("property-grid",[\App\Http\Controllers\PropertiesController::class,"show"])->name('property');
-Route::get("blog-grid",[\App\Http\Controllers\BlogController::class,"show"])->name('blog-grid');
+    Route::get("blog-grid",[\App\Http\Controllers\BlogController::class,"show"])->name('blog-grid');
 Route::get("contact",[\App\Http\Controllers\ContactController::class,"show"])->name('contact');
 Route::get("reservation", [App\Http\Controllers\BookingController::class, 'bookingAdd'])->middleware('auth')->name('reservation');
 Route::get("property-single",[\App\Http\Controllers\PropertySingleController::class,"show"])->name('property-single');
@@ -62,13 +55,31 @@ Route::get('profile', [ProfileController::class, 'create'])->middleware('auth')-
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
 
 
+
+// -----------------------------Admin----------------------------------------//
+Route::get('/adminhome', [App\Http\Controllers\HomeController::class, 'index1'])->middleware('auth')->name('adminhome');
+Route::get('form/allbooking1', [App\Http\Controllers\BookingController::class, 'allbooking1'])->middleware('auth')->name('form/allbooking1');
+Route::get('form/booking/edit/{bkg_id}', [App\Http\Controllers\BookingController::class, 'bookingEdit1']);
+Route::get('form/booking/add1', [App\Http\Controllers\BookingController::class, 'bookingAdd1'])->middleware('auth')->name('form/booking/add1');
+Route::post('form/booking/save1', [App\Http\Controllers\BookingController::class, 'saveRecord1'])->middleware('auth')->name('form/booking/save1');
+Route::post('form/booking/update', [App\Http\Controllers\BookingController::class, 'updateRecord1'])->middleware('auth')->name('form/booking/update1');
+Route::post('form/booking/delete', [App\Http\Controllers\BookingController::class, 'deleteRecord1'])->middleware('auth')->name('form/booking/delete1');
+Route::get('form/allcustomers/page1', [App\Http\Controllers\CustomerController::class, 'allCustomers1'])->middleware('auth')->name('form/allcustomers/page1');
+Route::get('form/allrooms/page1', [App\Http\Controllers\RoomsController::class, 'allrooms1'])->middleware('auth')->name('form/allrooms/page1');
+Route::get('form/addroom/page1', [App\Http\Controllers\RoomsController::class, 'addRoom1'])->middleware('auth')->name('form/addroom/page1');
+Route::get('form/allemployees/page1', [App\Http\Controllers\EmployeesController::class, 'allEmployees1'])->middleware('auth')->name('form/allemployees/page1');
+Route::get('form/employees/leave1', [App\Http\Controllers\EmployeesController::class, 'Employeesleave1'])->middleware('auth')->name('form/employees/leave1');
+
+
+
+
 // -----------------------------home----------------------------------------//
 /*Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth')->name('home');
 Route::get('/profile', [App\Http\Controllers\HomeController::class, 'profile'])->middleware('auth')->name('profile');*/
 
 // -----------------------------login----------------------------------------//
-Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'login'])->name('login');
-Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'authenticate']);
+Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'login']);
+Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'authenticate'])->name('login');
 Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
 
 // ------------------------------ register ---------------------------------//
@@ -140,12 +151,7 @@ Route::get('/admin', function () {
     return view('dashboard.admin');
 })->name('admin');
 
-Route::get('/', function () {
-    return view('screens.home');
-});
 
-
-Route::get("home", [HomeController::class, "show"])->name('home');
 Route::get("about", [\App\Http\Controllers\AboutController::class, "show"])->name('about');
 Route::get("property-grid", [\App\Http\Controllers\PropertiesController::class, "show"])->name('property');
 Route::get("blog-grid", [\App\Http\Controllers\BlogController::class, "show"])->name('blog-grid');
@@ -157,14 +163,11 @@ Route::get("contact", [\App\Http\Controllers\ContactController::class, "show"])-
 Route::post("message", [\App\Http\Controllers\MessageController::class, "post"])->name('message');
 Route::post("comment", [\App\Http\Controllers\CommentController::class, "post"])->name('comment');
 Route::get("reservation", [\App\Http\Controllers\ReservationController::class, "show"])->name('reservation');
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
+
+//Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
 Route::get('profile', [ProfileController::class, 'create'])->middleware('auth')->name('profile');
 Route::post('user-profile', [ProfileController::class, 'update'])->middleware('auth');
-Route::get('sign-up', [RegisterController::class, 'create'])->middleware('guest')->name('register');
-Route::post('sign-up', [RegisterController::class, 'store'])->middleware('guest');
-Route::get('sign-in', [SessionsController::class, 'create'])->middleware('guest')->name('login');
-Route::post('sign-in', [SessionsController::class, 'store'])->middleware('guest');
-Route::post('sign-out', [SessionsController::class, 'destroy'])->middleware('auth')->name('logout');
+
 Route::get('user-profile', [ProfileController::class, 'view'])->name('user-profile');
 Route::get('tables', function () {
     return view('pages.tables');

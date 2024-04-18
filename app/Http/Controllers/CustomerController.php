@@ -16,6 +16,12 @@ class CustomerController extends Controller
         $allBookings = DB::table('bookings')->get();
         return view('formcustomers.allcustomers',compact('allCustomers',"allBookings"));
     }
+    public function allCustomers1()
+    {
+        $allCustomers1 = DB::table('customers')->get();
+        $allBookings1 = DB::table('bookings')->get();
+        return view('formcustomers1.allcustomers',compact('allCustomers1',"allBookings1"));
+    }
 
 
     // add Customer

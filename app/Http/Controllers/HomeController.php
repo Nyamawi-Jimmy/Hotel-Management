@@ -38,6 +38,15 @@ class HomeController extends Controller
         return view('dashboard.home',compact('allBookings', 'allBookingsCount',"roomsCount","customerCount"));
     }
 
+    public function index1()
+    {
+        $allBookings1 = DB::table('bookings')->get();
+        $allBookingsCount1 = DB::table('bookings')->get()->count();
+        $roomsCount1 = DB::table("rooms")->get()->count();
+        $customerCount1 = DB::table("customers")->get()->count();
+        return view('dashboardd.home',compact('allBookings1', 'allBookingsCount1',"roomsCount1","customerCount1"));
+    }
+
     // profile
     public function profile()
     {

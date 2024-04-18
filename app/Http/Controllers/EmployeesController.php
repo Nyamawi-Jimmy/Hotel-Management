@@ -18,6 +18,11 @@ class EmployeesController extends Controller
         $Employeesleave = DB::table('leaves')->get();
         return view('employees.leaves',compact('Employeesleave',));
     }
+    public function Employeesleave1()
+    {
+        $Employeesleave = DB::table('leaves')->get();
+        return view('employees.leaves',compact('Employeesleave',));
+    }
 
 
     //Staff Lists

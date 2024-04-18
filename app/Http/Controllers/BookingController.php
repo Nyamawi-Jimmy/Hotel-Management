@@ -15,6 +15,12 @@ class BookingController extends Controller
         $allBookings = DB::table('bookings')->get();
         return view('formbooking.allbooking',compact('allBookings'));
     }
+    public function allbooking1()
+    {
+        $allBookings1 = DB::table('bookings')->get();
+        return view('formbooking1.allbooking',compact('allBookings1'));
+    }
+
 
     // booking add
     public function bookingAdd()
@@ -23,6 +29,12 @@ class BookingController extends Controller
         $user = DB::table('users')->get();
         return view('formbooking.bookingadd',compact('data','user'));
     }
+    public function bookingAdd1()
+    {
+        $data1 = DB::table('room_types')->get();
+        $user1 = DB::table('users')->get();
+        return view('formbooking1.bookingadd',compact('data1','user1'));
+    }
 
     // booking edit
     public function bookingEdit($bkg_id)
@@ -30,9 +42,59 @@ class BookingController extends Controller
         $bookingEdit = DB::table('bookings')->where('bkg_id',$bkg_id)->first();
         return view('formbooking.bookingedit',compact('bookingEdit'));
     }
+    public function bookingEdit1($bkg_id)
+    {
+        $bookingEdit = DB::table('bookings')->where('bkg_id',$bkg_id)->first();
+        return view('formbooking.bookingedit',compact('bookingEdit'));
+    }
 
     // booking save record
     public function saveRecord(Request $request)
+    {
+        $request->validate([
+            'name'   => 'required|string|max:255',
+            'room_type'     => 'required|string|max:255',
+            'total_numbers' => 'required|string|max:255',
+            'date' => 'required|string|max:255',
+            'time' => 'required|string|max:255',
+            'arrival_date'  => 'required|string|max:255',
+            'depature_date' => 'string|max:255',
+            'email'      => 'required|string|max:255',
+            'phone_number'  => 'required|string|max:255',
+            'fileupload' => 'file',
+        ]);
+
+        DB::beginTransaction();
+        try {
+
+            $photo= $request->fileupload;
+            $file_name = rand() . '.' .$photo->getClientOriginalName();
+            $photo->move(public_path('/assets/upload/'), $file_name);
+
+            $booking = new Booking;
+            $booking->name = $request->name;
+            $booking->room_type     = $request->room_type;
+            $booking->total_numbers  = $request->total_numbers;
+            $booking->date  = $request->date;
+            $booking->time  = $request->time;
+            $booking->arrival_date   = $request->arrival_date;
+            $booking->depature_date  = $request->depature_date;
+            $booking->email       = $request->email;
+            $booking->ph_number   = $request->phone_number;
+            $booking->fileupload  = $file_name;
+            $booking->save();
+
+            DB::commit();
+            Toastr::success('Create new booking successfully :)','Success');
+            return redirect()->route('form/allbooking');
+
+        } catch(\Exception $e) {
+            DB::rollback();
+            Toastr::error('Add Booking fail :)','Error');
+            return redirect()->back();
+        }
+    }
+    public function saveRecord1(Request $request)
     {
         $request->validate([
             'name'   => 'required|string|max:255',
