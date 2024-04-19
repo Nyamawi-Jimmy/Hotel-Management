@@ -31,9 +31,11 @@
 			<a href="javascript:void(0);" id="toggle_btn"> <i class="fe fe-text-align-left"></i> </a>
 			<a class="mobile_btn" id="mobile_btn"> <i class="fas fa-bars"></i> </a>
 			<ul class="nav user-menu">
-				<li class="nav-item dropdown noti-dropdown">
+				{{--<li class="nav-item dropdown noti-dropdown">
+--}}{{--
 					<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <i class="fe fe-bell"></i> <span class="badge badge-pill">3</span> </a>
-{{--
+--}}{{--
+--}}{{--
 					<div class="dropdown-menu notifications">
 						<div class="topnav-dropdown-header"> <span class="notification-title">Notifications</span> <a href="javascript:void(0)" class="clear-noti"> Clear All </a> </div>
 						<div class="noti-content"   >
@@ -97,7 +99,7 @@
 --}}
 				</li>
 				<li class="nav-item dropdown has-arrow">
-					<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <span class="user-img"><img class="rounded-circle" src="{{ URL::to('assets/img/profiles/avatar-01.jpg') }}" width="31" alt="Soeng Souy"></span> </a>
+					<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <span class="user-img"><img class="rounded-circle" src="{{ URL::to('assets/img/hotel_logo/png') }}" width="31" alt={{ Auth::user()->name }}></span> </a>
 					<div class="dropdown-menu">
 						<div class="user-header">
 							<div class="avatar avatar-sm"> <img src="{{ URL::to('assets/img/profiles/avatar-01.jpg') }}" alt="User Image" class="avatar-img rounded-circle"> </div>
@@ -112,12 +114,14 @@
 					</div>
 				</li>
 			</ul>
+{{--
 			<div class="top-nav-search">
 				<form>
 					<input type="text" class="form-control" placeholder="Search here">
 					<button class="btn" type="submit"><i class="fas fa-search"></i></button>
 				</form>
 			</div>
+--}}
 		</div>
 		@yield('menu')
         @yield('content')

@@ -15,6 +15,12 @@ class LeavesController extends Controller
         return view('employees.leavesadd',compact("addLeavess"));
     }
 
+    public function addLeavess1()
+    {
+        $addLeavess = DB::table('leaves')->get();
+        return view('employees1.leavesadd',compact("addLeavess"));
+    }
+
     public function saveRecord(Request $request)
     {
         $request->validate([

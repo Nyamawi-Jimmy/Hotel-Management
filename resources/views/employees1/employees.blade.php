@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('menu')
-    @extends('sidebar.dashboard')
+    @extends('sidebar1.dashboard')
 @endsection
 @section('content')
     {{-- message --}}
@@ -11,28 +11,28 @@
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul>
                         <li>
-                            <a href="{{ route('home') }}"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a>
+                            <a href="{{ route('adminhome') }}"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a>
                         </li>
                         <li class="list-divider"></li>
                         <li class="submenu">
                             <a href="#"><i class="fas fa-suitcase"></i> <span> Booking </span> <span class="menu-arrow"></span></a>
                             <ul class="submenu_class" style="display: none;">
-                                <li><a href="{{ route('form/allbooking') }}"> All Booking </a></li>
-                                <li><a href="{{ route('form/booking/add') }}"> Add Booking </a></li>
+                                <li><a href="{{ route('form/allbooking1') }}"> All Booking </a></li>
+                                <li><a href="{{ route('form/booking/add1') }}"> Add Booking </a></li>
                             </ul>
                         </li>
                         <li class="submenu">
                             <a href="#"><i class="fas fa-user"></i> <span> Customers </span> <span class="menu-arrow"></span></a>
                             <ul class="submenu_class" style="display: none;">
-                                <li><a class="active" href="{{ route('form/allcustomers/page') }}"> All customers </a></li>
+                                <li><a class="active" href="{{ route('form/allcustomers/page1') }}"> All customers </a></li>
 
                             </ul>
                         </li>
                         <li class="submenu">
                             <a href="#"><i class="fas fa-key"></i> <span> Rooms </span> <span class="menu-arrow"></span></a>
                             <ul class="submenu_class" style="display: none;">
-                                <li><a href="{{ route('form/allrooms/page') }}">All Rooms </a></li>
-                                <li><a href="{{ route('form/addroom/page') }}"> Add Rooms </a></li>
+                                <li><a href="{{ route('form/allrooms/page1') }}">All Rooms </a></li>
+                                <li><a href="{{ route('form/addroom/page1') }}"> Add Rooms </a></li>
                             </ul>
                         </li>
                         <li class="submenu">

@@ -69,7 +69,8 @@ Route::get('form/allrooms/page1', [App\Http\Controllers\RoomsController::class, 
 Route::get('form/addroom/page1', [App\Http\Controllers\RoomsController::class, 'addRoom1'])->middleware('auth')->name('form/addroom/page1');
 Route::get('form/allemployees/page1', [App\Http\Controllers\EmployeesController::class, 'allEmployees1'])->middleware('auth')->name('form/allemployees/page1');
 Route::get('form/employees/leave1', [App\Http\Controllers\EmployeesController::class, 'Employeesleave1'])->middleware('auth')->name('form/employees/leave1');
-
+Route::get('form/employees/addleave1', [App\Http\Controllers\LeavesController::class, 'addLeavess1'])->middleware('auth')->name('form/employees/addleave1');
+Route::get('generate', [\App\Http\Controllers\pdfdownload::class, 'generatePDF']);
 
 
 

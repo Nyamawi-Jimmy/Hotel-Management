@@ -153,9 +153,7 @@
           <li class="nav-item">
             <a class="nav-link active" href="{{ route('about') }}">About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('property') }}">Property</a>
-          </li>
+
           <li class="nav-item">
             <a class="nav-link" href="{{ route('blog-grid') }}">Blog</a>
           </li>
@@ -371,9 +369,7 @@
                           <li class="list-inline-item">
                               <a href="{{ route('about') }}">About</a>
                           </li>
-                          <li class="list-inline-item">
-                              <a href="{{ route('property') }}">Property</a>
-                          </li>
+
                           <li class="list-inline-item">
                               <a href="{{ route('blog-grid') }}">Blog</a>
                           </li>

@@ -21,7 +21,7 @@ class EmployeesController extends Controller
     public function Employeesleave1()
     {
         $Employeesleave = DB::table('leaves')->get();
-        return view('employees.leaves',compact('Employeesleave',));
+        return view('employees1.leaves',compact('Employeesleave',));
     }
 
 
@@ -30,6 +30,11 @@ class EmployeesController extends Controller
     {
         $allEmployees = DB::table('employees')->get();
         return view('employees.employees',compact('allEmployees'));
+    }
+    public function allEmployees1()
+    {
+        $allEmployees = DB::table('employees')->get();
+        return view('employees1.employees',compact('allEmployees'));
     }
 
 

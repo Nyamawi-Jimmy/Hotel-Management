@@ -30,21 +30,21 @@ class HomeController extends Controller
     // home page
     public function index()
     {
-
         $allBookings = DB::table('bookings')->get();
         $allBookingsCount = DB::table('bookings')->get()->count();
         $roomsCount = DB::table("rooms")->get()->count();
         $customerCount = DB::table("customers")->get()->count();
-        return view('dashboard.home',compact('allBookings', 'allBookingsCount',"roomsCount","customerCount"));
+        return view('dashboard.home',compact('allBookings', 'allBookingsCount',"roomsCount","customerCount",));
     }
 
     public function index1()
     {
+        $users = DB::table("users")->get(); // Assuming User is your model for users
         $allBookings1 = DB::table('bookings')->get();
         $allBookingsCount1 = DB::table('bookings')->get()->count();
         $roomsCount1 = DB::table("rooms")->get()->count();
         $customerCount1 = DB::table("customers")->get()->count();
-        return view('dashboardd.home',compact('allBookings1', 'allBookingsCount1',"roomsCount1","customerCount1"));
+        return view('dashboardd.home',compact('allBookings1', 'allBookingsCount1',"roomsCount1","customerCount1","users"));
     }
 
     // profile

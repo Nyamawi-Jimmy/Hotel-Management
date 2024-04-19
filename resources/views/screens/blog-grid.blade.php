@@ -146,9 +146,7 @@
           <li class="nav-item">
               <a class="nav-link " href="{{ route('about') }}">About</a>
           </li>
-          <li class="nav-item">
-              <a class="nav-link" href="{{ route('property') }}">Property</a>
-          </li>
+
           <li class="nav-item">
               <a class="nav-link active" href="{{ route('blog-grid') }}">Blog</a>
           </li>
@@ -180,7 +178,7 @@
       <div class="row">
         <div class="col-md-12 col-lg-8">
           <div class="title-single-box">
-            <h1 class="title-single">Our Amazing Posts</h1>
+            <h1 class="title-single">Our Amazing Properties</h1>
             <span class="color-text-a">Grid News</span>
           </div>
         </div>
@@ -213,17 +211,12 @@
             <div class="card-overlay">
               <div class="card-header-b">
                 <div class="card-category-b">
-                  <a href="#" class="category-b">Travel</a>
+                  <a href="{{route("form/booking/add")}}" class="category-b">Nyeri View</a>
                 </div>
                 <div class="card-title-b">
-                  <h2 class="title-2">
-                    <a href="#">Travel is comming
-                      <br> new</a>
-                  </h2>
+
                 </div>
-                <div class="card-date">
-                  <span class="date-b">18 Sep. 2023</span>
-                </div>
+
               </div>
             </div>
           </div>
@@ -236,17 +229,9 @@
             <div class="card-overlay">
               <div class="card-header-b">
                 <div class="card-category-b">
-                  <a href="#" class="category-b">Travel</a>
+                  <a href="{{route("form/booking/add")}}" class="category-b">Mama Kens</a>
                 </div>
-                <div class="card-title-b">
-                  <h2 class="title-2">
-                    <a href="#">Travel is comming
-                      <br> new</a>
-                  </h2>
-                </div>
-                <div class="card-date">
-                  <span class="date-b">18 Dec. 2023</span>
-                </div>
+
               </div>
             </div>
           </div>
@@ -259,17 +244,9 @@
             <div class="card-overlay">
               <div class="card-header-b">
                 <div class="card-category-b">
-                  <a href="#" class="category-b">Travel</a>
+                  <a href="{{route("form/booking/add")}}" class="category-b">Kens</a>
                 </div>
-                <div class="card-title-b">
-                  <h2 class="title-2">
-                    <a href="#">Travel is comming
-                      <br> new</a>
-                  </h2>
-                </div>
-                <div class="card-date">
-                  <span class="date-b">18 Oct. 2023</span>
-                </div>
+
               </div>
             </div>
           </div>
@@ -282,16 +259,7 @@
             <div class="card-overlay">
               <div class="card-header-b">
                 <div class="card-category-b">
-                  <a href="#" class="category-b">Travel</a>
-                </div>
-                <div class="card-title-b">
-                  <h2 class="title-2">
-                    <a href=href="#">Travel is comming
-                      <br> new</a>
-                  </h2>
-                </div>
-                <div class="card-date">
-                  <span class="date-b">18 Jan. 2024</span>
+                  <a href="{{route("form/booking/add")}}" class="category-b">Angies</a>
                 </div>
               </div>
             </div>
@@ -305,16 +273,7 @@
             <div class="card-overlay">
               <div class="card-header-b">
                 <div class="card-category-b">
-                  <a href="#" class="category-b">Travel</a>
-                </div>
-                <div class="card-title-b">
-                  <h2 class="title-2">
-                    <a href="#">Travel is comming
-                      <br> new</a>
-                  </h2>
-                </div>
-                <div class="card-date">
-                  <span class="date-b">16 Oct. 2023</span>
+                  <a href="{{route("form/booking/add")}}" class="category-b">Maisha</a>
                 </div>
               </div>
             </div>
@@ -328,16 +287,7 @@
             <div class="card-overlay">
               <div class="card-header-b">
                 <div class="card-category-b">
-                  <a href="#" class="category-b">Travel</a>
-                </div>
-                <div class="card-title-b">
-                  <h2 class="title-2">
-                    <a href=href="#">Travel is comming
-                      <br> new</a>
-                  </h2>
-                </div>
-                <div class="card-date">
-                  <span class="date-b">4 Sep. 2023</span>
+                  <a href="{{route("form/booking/add")}}" class="category-b">Baraka</a>
                 </div>
               </div>
             </div>
@@ -415,9 +365,7 @@
                           <li class="list-inline-item">
                               <a href="{{ route('about') }}">About</a>
                           </li>
-                          <li class="list-inline-item">
-                              <a href="{{ route('property') }}">Property</a>
-                          </li>
+
                           <li class="list-inline-item">
                               <a href="{{ route('blog-grid') }}">Blog</a>
                           </li>

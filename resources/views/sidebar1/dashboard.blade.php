@@ -12,8 +12,7 @@
                 </li>
                 <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Customers </span> <span class="menu-arrow"></span></a>
                     <ul class="submenu_class" style="display: none;">
-                        <li><a href="{{ route('form/allcustomers/page') }}"> All customers </a></li>
-                        <li><a href="{{ route('form/addcustomer/page') }}"> Add Customer </a></li>
+                        <li><a href="{{ route('form/allcustomers/page1') }}"> All customers </a></li>
                     </ul>
                 </li>
                 <li class="submenu"> <a href="#"><i class="fas fa-key"></i> <span> Rooms </span> <span class="menu-arrow"></span></a>
@@ -25,8 +24,8 @@
 
                 <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Staff </span> <span class="menu-arrow"></span></a>
                     <ul class="submenu_class" style="display: none;">
-                        <li><a href="{{route("form/allemployees/page")}}">Employees List </a></li>
-                        <li><a href="{{route("form/employees/leave")}}">Leaves </a></li>
+                        <li><a href="{{route("form/allemployees/page1")}}">Employees List </a></li>
+                        <li><a href="{{route("form/employees/leave1")}}">Leaves </a></li>
 
                     </ul>
                 </li>

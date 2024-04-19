@@ -62,7 +62,7 @@
                                             <td><a href="#" class="__cf_email__" data-cfemail="2652494b4b5f44435448474a66435e474b564a430845494b">{{ $bookings->email }}</a></td>
                                             <td>{{ $bookings->ph_number }}</td>
                                             <td>
-                                                <div class="actions"> <a href="#" class="btn btn-sm bg-success-light mr-2">Active</a> </div>
+                                                <div class="actions"> <a href="#" class="btn btn-sm bg-success-light mr-2">Pending</a> </div>
                                             </td>
                                             <td class="text-right">
                                                 <div class="dropdown dropdown-action">
